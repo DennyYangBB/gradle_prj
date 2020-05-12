@@ -11,6 +11,19 @@ plugins {
     id 'java-library'
 }
 
+
+apply plugin: 'war' //®M¥Îwar plugin
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+war {
+	webAppDirName = 'WebContent'
+	exclude 'WEB-INF/lib/*'
+	baseName = "testwar"
+}
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
