@@ -12,7 +12,8 @@ plugins {
 }
 
 
-apply plugin: 'war' //®M¥Îwar plugin
+apply plugin: 'java'
+apply plugin: 'war'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 sourceCompatibility = 1.6
@@ -40,3 +41,4 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
+
